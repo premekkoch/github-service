@@ -1,6 +1,6 @@
 {
     "name": "premekkoch/github-service",
-    "description": "Service to get files last modification date on github",
+    "description": "Nette Framework service to get file last modification date from GitHub",
     "type": "library",
 	"licence": "MIT",
     "authors": [
