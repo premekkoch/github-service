@@ -3,6 +3,8 @@
     "description": "Service to get files last modification date on github",
     "type": "library",
 	"licence": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": "true",
     "authors": [
         {
             "name": "premekkoch",
