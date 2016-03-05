@@ -11,7 +11,7 @@ composer require premekkoch/github-service
 
 Configuration
 -------------
-### 1. Add section Github to `parameters` section in `config.neon`:
+### 1. Add section "Github" to `parameters` section in `config.neon`:
 ```
   parameters:
     GitHub:
@@ -35,20 +35,20 @@ How to use
 ----------
 
 ### 1. Simple use:
-Inject an service to presenter
+Inject an service into presenter
 ```
   /** @var PremekKoch\GitHubService @inject */
   public $githubService;
 ```
-and than call service method
+and then call service method
 ```
 	:
   $file = 'test.md';
-  $this->githubService->->getFileLastCommit($file, TRUE);
+  $this->githubService->getFileLastCommit($file, TRUE);
 	:
 ```
 
-By setting second parameter "useCache" you can decide, if you want to get cashed or "live" data. If this parameter is set to FALSE, cache is refreshed automaticaly for this file.
+By setting second parameter "useCache" you can decide, if you want to get cashed or "live" data. If this parameter is set to FALSE, GitHub API is called and cache is refreshed automaticaly for this file.
    
 ### 2. Cache refresh:
 Simply call 
