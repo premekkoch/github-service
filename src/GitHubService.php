@@ -85,14 +85,8 @@ class GitHubService extends Object
         $path = $this->subdir ? $this->subdir . '/' : '';
         $url = self::GITHUB_URL . '/' . $this->user . '/' . $this->repo . '/commits?path=' . $path . $fileName;
         $tree = $this->run($url);
-        if (count($tree) === 0) {
-          return NULL;
-        } else {
-          $result = $tree[0];
-          $this->cache->save($fileName, $result);
 
-          return $result;
-        }
+	      return count($tree) === 0 ? NULL : $tree[0];
       });
   }
 
