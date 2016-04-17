@@ -81,7 +81,7 @@ class GitHubService extends Object
     }
 
     return $this->cache->load($fileName,
-      function ($fileName) {
+      function () use ($fileName) {
         $path = $this->subdir ? $this->subdir . '/' : '';
         $url = self::GITHUB_URL . '/' . $this->user . '/' . $this->repo . '/commits?path=' . $path . $fileName;
         $tree = $this->run($url);
