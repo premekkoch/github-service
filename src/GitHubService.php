@@ -11,7 +11,7 @@ namespace PremekKoch;
 
 use Exception;
 use Nette\Caching\Cache;
-use Nette\Caching\IStorage;
+use Nette\Caching\Storages\FileStorage;
 use Nette\Object;
 
 
@@ -52,9 +52,8 @@ class GitHubService extends Object
    * @param          $subdir
    * @param          $clientId
    * @param          $clientSecret
-   * @param IStorage $storage
    */
-  public function __construct($user, $repo, $subdir, $clientId, $clientSecret, IStorage $storage)
+  public function __construct($user, $repo, $subdir, $clientId, $clientSecret)
   {
     $this->user = $user;
     $this->repo = $repo;
@@ -62,7 +61,8 @@ class GitHubService extends Object
     $this->userAgent = $user;
     $this->clientId = $clientId;
     $this->clientSecret = $clientSecret;
-    $this->cache = new Cache($storage, 'github');
+	  $storage = new FileStorage('temp');
+	  $this->cache = new Cache($storage, 'github');
   }
 
 
