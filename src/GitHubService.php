@@ -1,8 +1,6 @@
 <?php
 
 /**
- * This file is part of extension of Nette Framework
- *
  * @license    MIT
  * @author     Premek Koch
  */
@@ -47,13 +45,14 @@ class GitHubService extends Object
   /**
    * Constructor
    *
-   * @param          $user
-   * @param          $repo
-   * @param          $subdir
-   * @param          $clientId
-   * @param          $clientSecret
+   * @param string   $user
+   * @param string   $repo
+   * @param string   $subdir
+   * @param string   $clientId
+   * @param string   $clientSecret
+   * @param string   $fileStoragePath
    */
-  public function __construct($user, $repo, $subdir, $clientId, $clientSecret)
+  public function __construct($user, $repo, $subdir, $clientId, $clientSecret, $fileStoragePath = 'temp')
   {
     $this->user = $user;
     $this->repo = $repo;
@@ -61,7 +60,7 @@ class GitHubService extends Object
     $this->userAgent = $user;
     $this->clientId = $clientId;
     $this->clientSecret = $clientSecret;
-	  $storage = new FileStorage('temp');
+	  $storage = new FileStorage($fileStoragePath);
 	  $this->cache = new Cache($storage, 'github');
   }
 
