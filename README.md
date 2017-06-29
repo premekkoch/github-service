@@ -28,7 +28,7 @@ Configuration
 
 ```
 services:
-	  githubService: PremekKoch\GitHubService(%GitHub.user%, %GitHub.repo%, %GitHub.subdir%, %GitHub.client_id%, %GitHub.client_secret%)
+	  githubService: PremekKoch\GitHub\GitHubService(%GitHub.user%, %GitHub.repo%, %GitHub.subdir%, %GitHub.client_id%, %GitHub.client_secret%)
 ```
 
 How to use
@@ -37,7 +37,7 @@ How to use
 ### 1. Simple use:
 Inject an service into presenter
 ```
-  /** @var PremekKoch\GitHubService @inject */
+  /** @var PremekKoch\GitHub\GitHubService @inject */
   public $githubService;
 ```
 and then call service method

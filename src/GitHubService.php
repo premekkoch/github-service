@@ -5,7 +5,7 @@
  * @author     Premek Koch
  */
 
-namespace PremekKoch;
+namespace PremekKoch\GitHub;
 
 use Exception;
 use Nette\Caching\Cache;

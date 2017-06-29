@@ -15,6 +15,6 @@
         "nette/caching": "~2.2"
     },
 	"autoload": {
-		"psr-4": { "PremekKoch\\": "src/" }
+		"psr-4": { "PremekKoch\\GitHub\\": "src/" }
 	}
 }
