@@ -2,7 +2,7 @@
     "name": "premekkoch/github-service",
     "description": "Nette Framework service to get file last modification date from GitHub",
     "type": "library",
-	"licence": "MIT",
+	"license": ["MIT"],
     "authors": [
         {
             "name": "premekkoch",
@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "nette/application": "~2.2",
-        "nette/caching": "~2.2"
+        "php": ">=7.1",
+        "nette/application": "^3.0",
+        "nette/caching": "^3.0"
     },
 	"autoload": {
 		"psr-4": { "PremekKoch\\GitHub\\": "src/" }
